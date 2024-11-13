@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="66dp"
+        android:gravity="center"
+        android:text="Add New Item to Inventory"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextItemName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addItemButton"
+        android:layout_width="141dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="156dp"
+        android:onClick="AddNewItem"
+        android:text="Add Item"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancelButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextQty" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="OpenGridScreen"
+        android:text="Cancel"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/addItemButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addItemButton" />
+
+    <EditText
+        android:id="@+id/editTextItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Item Name"
+        app:layout_constraintBottom_toTopOf="@+id/editTextQty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/editTextQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Quantity"
+        app:layout_constraintBottom_toTopOf="@+id/addItemButton"
+        app:layout_constraintStart_toStartOf="@+id/editTextItemName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextItemName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
